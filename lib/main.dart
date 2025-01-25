@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/constants/my_colors.dart';
 import 'package:notes_app/views/screens/on_boarding_screen.dart';
 
 void main() {
@@ -13,6 +14,11 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
     debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+      scaffoldBackgroundColor: MyColors.myWhite,
+      appBarTheme: AppBarTheme(backgroundColor: MyColors.myWhite)
+
+    ),
       
       home: const OnBoardingScreen(),
     );

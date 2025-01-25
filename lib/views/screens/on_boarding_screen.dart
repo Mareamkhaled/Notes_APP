@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/constants/my_colors.dart';
+import 'package:notes_app/views/screens/home_screen.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -7,7 +8,7 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyColors.myWhite,
+      // backgroundColor: MyColors.myWhite,
       body: SizedBox(
         height: double.infinity,
         width: double.infinity,
@@ -62,7 +63,7 @@ class OnBoardingScreen extends StatelessWidget {
                 backgroundColor: MyColors.myBink
               ),
               onPressed: () {
-              
+              Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(),));
             }, child: Text("Get Started"
             ,style: TextStyle(
               color: Colors.white
