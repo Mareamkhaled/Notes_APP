@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/constants/my_colors.dart';
+import 'package:notes_app/views/widgets/custom_bottom_sheet.dart';
 import 'package:notes_app/views/widgets/notes_body_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,10 +18,13 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: MyColors.myBink,
         elevation: 0,
         onPressed: () {
-        
+        showModalBottomSheet(context: context, builder: (context) {
+          return CustomBottomSheet();
+        },);
       },child: Icon(Icons.add),),
 
       body: NotesBodyWidget(),
+      
     );
   }
 }
