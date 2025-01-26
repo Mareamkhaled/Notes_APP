@@ -15,7 +15,10 @@ class _NotesBodyWidgetState extends State<NotesBodyWidget> {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomAppBarWidget(title: "Notes", icon: Icons.search)
+        CustomAppBarWidget(title: "Notes", icon: Icons.search),
+        Expanded(child: SingleChildScrollView(
+          
+        ))
       ],
     ));
   }
