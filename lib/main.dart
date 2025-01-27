@@ -9,8 +9,8 @@ import 'package:notes_app/views/screens/on_boarding_screen.dart';
 
 void main() async{
   await Hive.initFlutter();
-  await Hive.openBox<NotesModel>('notes box');
   Hive.registerAdapter(NotesModelAdapter());
+  await Hive.openBox<NotesModel>('notes box');
   runApp(const NotesApp());
 }
 
